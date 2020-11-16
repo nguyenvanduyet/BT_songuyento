@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Prime(){
+        let count = +prompt('Nhập số lượng snt muốn hiện thị');
+        let n = 0;
+        let num = 0;
+        let str ="";
+        while (num < count){
+            let flag = true;
+            if ( n < 2) {
+                flag = false;
+            }else if(n===2){
+                flag = true;
+            }else {
+                for (let i=2; i<n; i++){
+                    if (n%i===0){
+                        flag = false;
+                    }
+                }
+            }
+            if (flag){
+                str += n+',';
+                num++;
+            }
+            n++;
+        }
+        document.write(str);
+    }
+    Prime();
+
+</script>
+</body>
+</html>
